@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment - Tip & Bill Split Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 40px;
+      background-color: #0f172a;
+      color: #e2e8f0;
+    }
+    h1 {
+      text-align: center;
+      color: #38bdf8;
+    }
+    form {
+      background-color: #1e293b;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      color: #94a3b8;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      font-size: 1rem;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      background-color: #0f172a;
+      color: #f1f5f9;
+    }
+    input:focus {
+      outline: 2px solid #38bdf8;
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+    p.note {
+      text-align: center;
+      margin-top: 20px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Assignment - Tip & Bill Split Calculator</h1>
+
+  <form>
+    <label for="bill">Enter bill amount:</label>
+    <input type="number" id="bill" placeholder="e.g., 100" />
+
+    <label for="tip">Enter tip percentage (%):</label>
+    <input type="number" id="tip" placeholder="e.g., 10" />
+
+    <label for="people">Number of people splitting the bill:</label>
+    <input type="number" id="people" placeholder="e.g., 2" />
+
+    <button type="button" id="btnMood">Generate Mood</button>
+    <button type="button" id="btnTip">Calculate Tip</button>
+    <button type="button" id="btnSplit">Split Bill</button>
+  </form>
+
+  <p class="note">💡 Instructions for this assignment are inside the JavaScript section below.</p>
+
+  <script>
+   </script>
+  <!---->
+</body>
+</html>
