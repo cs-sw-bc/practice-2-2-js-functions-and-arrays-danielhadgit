@@ -1,3 +1,40 @@
+
+function generateMoodMessage(){
+ let bill = document.getElementById("bill").value;
+ let people = document.getElementById("people").value;
+ let meal = null;
+
+  if (bill<=20){
+ meal = "Budget Friendly!";
+  } else if (bill >= 200 && people >= 4){
+ meal = "Party Vibes!"
+  } else if(people == 1){
+    meal = "Solo Dining!"
+  } else{
+    meal = "Casual Dinner Night";
+  }
+  alert(`Your meal is ${meal}`);
+}
+
+function calculateTip(){
+     let bill = document.getElementById("bill").value;
+     let tip = document.getElementById("tip").value;
+     let tipamount = (bill *tip /100)
+     alert(`Your total tip amount is ${tipamount}`)
+     return tipamount;
+}
+
+function splitBill(){
+    let bill = document.getElementById("bill").value;
+     let tip = document.getElementById("tip").value;
+     let people = document.getElementById("people").value;
+     let tipamount = calculateTip();
+ let totalamount = (bill+tipamount)
+ let splitamount = (totalamount / people)
+ alert (` Each person should pay ${splitamount}!`);
+
+
+}
 /* =============================================================
      🎯 ASSIGNMENT: TIP & BILL SPLIT CALCULATOR
      -------------------------------------------------------------
@@ -21,7 +58,7 @@
          - Calculates the total tip (bill * tip / 100).
          - Returns the total tip.
          - Shows an alert: "Your tip amount is $10."
-
+// 
      3️⃣ Create a function named splitBill() that:
          - Calls calculateTip() to reuse its return value.
          - Calculates total amount = bill + tip.
