@@ -1,39 +1,40 @@
 
-function generateMoodMessage(){
- let bill = document.getElementById("bill").value;
- let people = document.getElementById("people").value;
- let meal = null;
+function generateMoodMessage() {
+    let bill = Number(document.getElementById("bill").value);
+    let people = Number(document.getElementById("people").value);
+    let meal = null;
 
-  if (bill<=20){
- meal = "Budget Friendly!";
-  } else if (bill >= 200 && people >= 4){
- meal = "Party Vibes!"
-  } else if(people == 1){
-    meal = "Solo Dining!"
-  } else{
-    meal = "Casual Dinner Night";
-  }
-  alert(`Your meal is ${meal}`);
+    if (bill <= 20) {
+        meal = "Budget Friendly!";
+    } else if (bill >= 200 && people >= 4) {
+        meal = "Party Vibes!"
+    } else if (people == 1) {
+        meal = "Solo Dining!"
+    } else {
+        meal = "Casual Dinner Night";
+    }
+    alert(`Your meal is ${meal}`);
 }
 
-function calculateTip(){
-     let bill = document.getElementById("bill").value;
-     let tip = document.getElementById("tip").value;
-     let tipamount = (bill *tip /100)
-     alert(`Your total tip amount is ${tipamount}`)
-     return tipamount;
+function calculateTip() {
+    let bill = Number(document.getElementById("bill").value);
+    let tip = Number(document.getElementById("tip").value);
+    let tipamount = (bill * tip / 100)
+    alert(`Your total tip amount is ${tipamount}`)
+    return tipamount;
 }
 
-function splitBill(){
-    let bill = document.getElementById("bill").value;
-     let tip = document.getElementById("tip").value;
-     let people = document.getElementById("people").value;
-     let tipamount = calculateTip();
- let totalamount = (bill+tipamount)
- let splitamount = (totalamount / people)
- alert (` Each person should pay ${splitamount}!`);
-
-
+function splitBill() {
+    let bill = Number(document.getElementById("bill").value);
+    let people = Number(document.getElementById("people").value);
+    let tipamount = calculateTip();
+    let totalamount = (bill + tipamount)
+    let splitamount = (totalamount / people)
+    if (splitamount >=100){
+        alert(`Whoa, Thats pricey! ${splitamount}`);
+    } else{
+        alert(`Nice Thats affordable! ${splitamount}`)
+    }
 }
 /* =============================================================
      🎯 ASSIGNMENT: TIP & BILL SPLIT CALCULATOR
@@ -84,4 +85,3 @@ function splitBill(){
      - Calculate Tip button → calculateTip()
      - Split Bill button → splitBill()
   ============================================================= */
- 
